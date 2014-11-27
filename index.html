@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="img/favicon.ico">
+
+		<title>A Little Less Desperation</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!--<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/spacelab/bootstrap.min.css" rel="stylesheet">-->
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/blueimp-gallery.min.css">
+		<link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+
+		<link rel="stylesheet" href="css/bootstrap-languages/languages.min.css">
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+		<link href="carousel.css" rel="stylesheet">
+
+		<style id="holderjs-style" type="text/css"></style>
+	</head>
+
+	<!-- NAVBAR
+================================================== -->
+	<body>
+		<div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="termsModalLabel">Impressum</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="navbar-wrapper">
+			<div class="container">
+				<div id="autocollapse" class="navbar navbar-inverse navbar-static-top" role="navigation">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#" style="padding-top:2px"><img id="logo" src="img/alld_logo.png" class="img-responsive" style="width: 140px; height: 140px;"></img></a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#"><span class='glyphicon glyphicon-home'></span> <span data-i18n="nav.home"></span></a></li>
+							<li class="dropdown" id="thorwe-oncollapse" style="display:none;">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-rocket"></i> <span data-i18n="nav.game"></span><span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#game"><i class="fa fa-rocket"></i> <span data-i18n="nav.game"></span></a></li>
+									<li><a href="#chars"><i class="fa fa-users"></i> <span data-i18n="nav.chars"></span></a></li>
+									<li><a href="#features"><i class="fa fa-list-ul"></i> <span data-i18n="nav.features"></span></a></li>
+									<li><a href="#concept"><i class="fa fa-paperclip"></i> <span data-i18n="nav.concept"></span></a></li>
+								</ul>
+							</li>
+							<li class="thorwe-collapse"><a href="#game"><i class="fa fa-rocket"></i> <span data-i18n="nav.game"></span></a></li>
+							<li class="thorwe-collapse"><a href="#chars"><i class="fa fa-users"></i> <span data-i18n="nav.chars"></span></a></li>
+							<li class="thorwe-collapse"><a href="#features"><i class="fa fa-list-ul"></i> <span data-i18n="nav.features"></span></a></li>
+							<li class="thorwe-collapse"><a href="#concept"><i class="fa fa-paperclip"></i> <span data-i18n="nav.concept"></span></a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-picture-o"></i> <span data-i18n="nav.gallery"></span><span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#" id="nav_gallery"><i class="fa fa-camera"></i> <span data-i18n="common.pictures"></span></a></li>
+									<li><a href="#" id="nav_gallery_video"><i class="fa fa-film"></i> <span data-i18n="common.media"></span></span></a></li>
+						</ul>
+						</li>
+					</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#team"><i class="fa fa-coffee"></i> <span data-i18n="nav.team"></span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language"></i> <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="lang_switch" data-lang="de"><span class="lang-sm lang-lbl-full" lang="de"></span></a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="lang_switch" data-lang="en"><span class="lang-sm lang-lbl-full" lang="en"></span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Carousel ================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+		<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active" id="title">
+			<!--<img src="img/title.jpg" alt="A Little Less Desperation" align="bottom">-->
+			<div style="background:url('./img/alld_title_bg_new.jpeg') center center; background-size:cover;" class="slider-size"></div>
+			<div class="container">
+				<div class="carousel-caption">
+					<!--<h1>A Little Less Desperation</h1>-->
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<!--<img src="img/sc_goldmine_dark.jpg" alt="Herunterladen">-->
+			<div style="background:url('./img/sc_goldmine_dark.jpg') center center; background-size:cover;" class="slider-size"></div>
+			<div class="container">
+				<div class="carousel-caption">
+					<!--<h1 data-i18n="common.demo_heading"></h1>
+<p data-i18n="[html]common.demo_lead"></p>
+<p><a class="btn btn-lg btn-default" href="#" role="button" disabled="disabled"><i class="fa fa-download"></i> <span data-i18n="common.demo_btn"></span></a></p>-->
+					<p data-i18n="common.desc"></p>
+					<p><a class="btn btn-lg btn-default" href="#game" role="button" data-i18n="common.more"></a></p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<!--<img src="img/sc_greenhouse.jpg" alt="Third slide">-->
+			<div style="background:url('./img/sc_greenhouse.jpg') center center; background-size:cover;" class="slider-size"></div>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1 data-i18n="common.gallery_heading"></h1>
+					<p data-i18n="common.gallery_lead"></p>
+					<p><a class="btn btn-lg btn-default" id="carousel_gallery" href="#" role="button" data-i18n="common.gallery_btn"></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="carousel/#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="carousel/#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div><!-- /.carousel -->
+
+<!--<h1 style="text-align:center" data-i18n="home.lead"></h1><br>-->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing" style="margin-top:20px">
+
+	<!-- Three columns of text below the carousel -->
+	<div class="row">
+		<div class="col-lg-4">
+			<img class="img-circle" src="img/deaf_bird.png" alt="Deaf Bird Entertainment" style="width: 140px; height: 140px;">
+			<h2><span data-i18n="common.news"></span></h2>
+			<p data-i18n="common.news_lead"></p>
+			<p><a class="btn btn-default" href="#news" role="button"><i class="fa fa-newspaper-o"></i> <span data-i18n="common.news_btn"></span></a></p>
+		</div><!-- /.col-lg-4 -->
+		<div class="col-lg-4">
+			<img class="img-circle" src="img/mini_ufo.png" alt="The Game" style="width: 240px; height: 240px;">
+			<!--<h2 data-i18n="common.game"></h2>-->
+			<h1 data-i18n="home.lead"></h1>
+			<p data-i18n="common.game_lead"></p>
+			<p><a class="btn btn-default" href="#game" role="button"><i class="fa fa-rocket"></i> <span data-i18n="common.game_btn"></span></a></p>
+		</div><!-- /.col-lg-4 -->
+		<div class="col-lg-4">
+			<img class="img-circle" src="img/glaskolben.png" alt="Media" style="width: 140px; height: 140px;">
+			<h2><span data-i18n="common.demo_heading"></span></h2>
+			<p data-i18n="[html]common.demo_lead"></p>
+			<p><a class="btn btn-default" href="#" role="button" disabled="disabled"><i class="fa fa-download"></i> <span data-i18n="common.demo_btn"></span></a></p>
+		</div><!-- /.col-lg-4 -->
+	</div><!-- /.row -->
+
+	<br><br><br><br>
+	<hr class="featurette-divider">
+
+	<div id="game">
+		<h1><i class="fa fa-rocket"></i> <span data-i18n="game.heading"></span></h1><br>
+		<div class="row featurette">
+			<div class="col-md-3">
+				<img class="featurette-image img-responsive" src="img/sideshow_kabel.png">
+			</div>
+			<div class="col-md-9">
+				<p class="lead" data-i18n="home.1"></p>
+				<p class="lead" data-i18n="home.2"></p>
+				<img class="featurette-image img-responsive" src="img/korb2.png">
+			</div>
+		</div>
+		<div class="row featurette">
+			<div class="col-md-9">
+				<p class="lead" data-i18n="game.1"></p>
+				<p class="lead" data-i18n="game.2"></p>
+				<p class="lead" data-i18n="game.3"></p>
+				<p class="lead" data-i18n="game.4"></p>
+			</div>
+			<div class="col-md-3">
+				<img class="featurette-image img-responsive" src="img/sideshow_vents.png">
+			</div>
+		</div>
+	</div>
+
+	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+	<hr class="featurette-divider">
+
+	<div id="chars">
+		<h1><i class="fa fa-users"></i> <span data-i18n="chars.heading"></span></h1><br>
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/c_jacob_holding_hat.jpg">
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span class="text-muted" data-i18n="chars.jacob"></span> <span data-i18n="chars.jacob_a"></span> <span class="text-muted" data-i18n="chars.jacob_b"></span> <span data-i18n="chars.jacob_c"></span> <span class="text-muted" data-i18n="chars.jacob_d"></span> <span data-i18n="chars.jacob_e"></span> <span class="text-muted" data-i18n="chars.jacob_f"></span><br><span class="text-muted" data-i18n="chars.jacob2"></span> <span data-i18n="chars.jacob3"></span></h2>
+			</div>
+		</div>
+		<p class="lead" data-i18n="chars.jacob4"></p>
+		<p class="lead" data-i18n="chars.jacob5"></p>
+		<p class="lead" data-i18n="chars.jacob6"></p>
+
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/c_zuuley.png">
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span data-i18n="chars.zuuley"></span> <span class="text-muted" data-i18n="chars.zuuley_a"></span> <span data-i18n="chars.zuuley_b"></span> <span class="text-muted" data-i18n="chars.zuuley_c"></span></h2>
+			</div>
+		</div>
+		<p class="lead" data-i18n="chars.zuuley_lead"></p>
+
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/c_harold.jpg">
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span data-i18n="chars.harold"></span> <span class="text-muted" data-i18n="chars.harold_a"></span> <span data-i18n="chars.harold_b"></span> <span class="text-muted" data-i18n="chars.harold_c"></span> <span data-i18n="chars.harold_d"></span> <span class="text-muted" data-i18n="chars.harold_e"></span></h2>
+			</div>
+		</div>
+		<p class="lead" data-i18n="chars.harold_lead"></p>
+
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/c_electron-burke.jpg">
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span data-i18n="chars.elektron"></span> <span class="text-muted" data-i18n="chars.elektron_a"></span> <span data-i18n="chars.elektron_b"></span> <span class="text-muted" data-i18n="chars.elektron_c"></span> <span data-i18n="chars.elektron_d"></span> <span class="text-muted" data-i18n="chars.elektron_e"></span></h2>
+			</div>
+		</div>
+		<p class="lead" data-i18n="chars.elektron_lead"></p>
+		<p class="lead" data-i18n="chars.elektron_lead_2"></p>
+		<br><br>
+
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/c_elvis_500x800.png">
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span class="text-muted" data-i18n="chars.king"></span> <span data-i18n="chars.king_a"></span> <span class="text-muted" data-i18n="chars.king_b"></span> <span data-i18n="chars.king_c"></span> <span class="text-muted" data-i18n="chars.king_d"></span> <span data-i18n="chars.king_e"></span></h2>
+			</div>
+		</div>
+	</div>
+
+	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+	<hr class="featurette-divider">
+
+	<div id="features">
+		<h1><i class="fa fa-list-ul"></i> <span data-i18n="features.heading"></span></h1><br>
+		<ul class="lead">
+			<li data-i18n="features.1"></li>
+			<li data-i18n="features.2"></li>
+			<li data-i18n="features.3"></li>
+			<li data-i18n="features.4"></li>
+			<li data-i18n="features.5"></li>
+			<li data-i18n="features.6"></li>
+			<li data-i18n="features.7"></li>
+			<li data-i18n="features.8"></li>
+		</ul>
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span data-i18n="features.save"></span> <span data-i18n="features.saveb" class="text-muted"></span> <span data-i18n="features.savec"></span></h2>
+			</div>
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/jacob_learns_alien.png">
+			</div>
+		</div><br>
+		<p class="lead" data-i18n="features.save1"></p>
+		<p class="lead" data-i18n="features.seq"></p>
+	</div>
+
+	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+	<hr class="featurette-divider">
+
+	<div id="concept">
+		<h1 class="featurette-heading"><i class="fa fa-paperclip"></i> <span data-i18n="concept.heading"></span></h1><br>
+		<p class="lead" data-i18n="concept.lead"></p>
+
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span data-i18n="concept.a1"></span> <span class="text-muted" data-i18n="concept.a2"></span></h2>
+			</div>
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/kuchen_mit_dampf.png">
+			</div>
+		</div>
+
+		<div class="featurette">
+			<p class="lead" data-i18n="[html]concept.lead2"></p>
+		</div>
+		<div class="featurette">
+			<p class="lead"><span class="text-muted" data-i18n="concept.b1"></span> <span data-i18n="[html]concept.b2"></span></p>
+		</div>
+
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" src="img/kern_mit_zahn.png">
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading"><span class="text-muted" data-i18n="concept.c1"></span> <span data-i18n="concept.c2"></span> <span class="text-muted" data-i18n="concept.c3"></span> <span data-i18n="[html]concept.c4"></span></h2>
+			</div>
+		</div>
+	</div>
+
+	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+	<hr class="featurette-divider">
+
+	<div id="team">
+		<h1 class="featurette-heading"><i class="fa fa-coffee"></i> <span data-i18n="team.heading"></span></h1><br>
+		<p class="lead" data-i18n="team.lead"></p>
+
+		<div class="media">
+			<a class="media-left" href="#">
+				<img src="img/team_marian.jpg" alt="Marian">
+			</a>
+			<div class="media-body">
+				<h3 class="media-heading">Marian</h3>
+				<div class="lead">
+					<em data-i18n="team.marian"></em><br><br>
+					<ul>
+						<li data-i18n="team.marian1"></li>
+						<li data-i18n="team.marian2"></li>
+						<li data-i18n="team.marian3"></li>
+						<li data-i18n="team.marian4"></li>
+						<li data-i18n="team.marian5"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="media">
+			<a class="media-left" href="#">
+				<img src="img/team_2.jpg" alt="Lee">
+			</a>
+			<div class="media-body">
+				<h3 class="media-heading">Lee</h3>
+				<div class="lead">
+					<em data-i18n="team.lee"></em><br><br>
+					<ul>
+						<li data-i18n="team.lee1"></li>
+						<li data-i18n="team.lee2"></li>
+						<li data-i18n="team.lee3"></li>
+						<li data-i18n="team.lee4"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="media">
+			<a class="media-left" href="#">
+				<img src="img/team_1.jpg" alt="Stefan">
+			</a>
+			<div class="media-body">
+				<h3 class="media-heading">Stefan</h3>
+				<div class="lead">
+					<em data-i18n="team.stefan"></em><br><br>
+					<ul>
+						<li data-i18n="team.stefan1"></li>
+						<li data-i18n="team.stefan2"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<br>
+		<h4><em data-i18n="team.thankslead"></em></h4>
+		<p class="lead">
+			<span data-i18n="team.thanks1"></span><br>
+			<span data-i18n="team.thanks2"></span>
+		</p>
+	</div>
+
+	<div id="news">
+		<h1 class="featurette-heading"><i class="fa fa-newspaper-o"></i> <span data-i18n="common.news"></span></h1><br>
+		<!--<p class="lead" data-i18n="team.lead"></p>-->
+		<img class="img-circle" src="img/deaf_bird.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+		<h2 data-i18n="common.news_lead"></h2>
+		<div id="news_content" class="lead"></div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<!-- FOOTER -->
+	<footer>
+		<p><img src="img/visionaire_logo.jpg"></img></p>
+<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+<p>© Deaf Bird Entertainment - 2014 · <a href="#" id="impressum">Impressum</a> · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+
+</div><!-- /.container -->
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+	<!-- The container for the modal slides -->
+	<div class="slides"></div>
+	<!-- Controls for the borderless lightbox -->
+	<h3 class="title"></h3>
+	<a class="prev">‹</a>
+	<a class="next">›</a>
+	<a class="close">×</a>
+	<a class="play-pause"></a>
+	<ol class="indicator"></ol>
+	<!-- The modal dialog, which will be used to wrap the lightbox content -->
+	<div class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body next"></div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default pull-left prev">
+						<i class="glyphicon glyphicon-chevron-left"></i>
+						Previous
+					</button>
+					<button type="button" class="btn btn-primary next">
+						Next
+						<i class="glyphicon glyphicon-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="links">
+	<a href="img/lichtung.jpg" title="Und hier fängt die Geschichte an..." data-gallery>
+		<!--<img src="images/thumbnails/banana.jpg" alt="Banana">-->
+	</a>
+	<a href="img/sc_greenhouse.jpg" title="Gewächshaus auf einem Raumschiff" data-gallery></a>
+	<a href="img/sc_trailer_old.jpg" title="Terrestrisches Radio Observatorium für Technisch Entwickelte Lebensformen" data-gallery></a>
+	<a href="img/sc_trailer_inner.png" title="Hightech so weit das Auge reicht" data-gallery></a>
+	<a href="img/sc_goldmine_dark.jpg" title="Eine aufgegebene Goldmine" data-gallery></a>
+	<a href="img/sc_room_escapepods.jpg" title="Was für ein Glück! Eine Fluchtkapsel ist noch da!" data-gallery></a>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="js/i18next-1.7.4.js"></script>
+<script src="js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/bootstrap-image-gallery.min.js"></script>
+<script src="js/markdown.min.js"></script>
+<script src="js/move.min.js"></script>
+<script src="js/jquery.softscroll.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
