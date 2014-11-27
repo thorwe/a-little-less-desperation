@@ -23,35 +23,11 @@ $( document ).ready(function() {
 			},
 			{
 				title: 'In Science Fiction Filmen sieht man ja manchmal, wie im Notfall der Reaktorkern eines Raumschiffs abgeworfen werden muss. Aber was genau passiert dabei eigentlich? Nun, in unserem Raumschiff haben wir diesen komplizierten Vorgang einmal gefilmt!',
-				type: 'video/*',
-				poster: 'img/deaf_bird.png',
-				sources: [
-					{
-						href: 'http://www.alld-game.net/.cm4all/mediadb/.reactor%20core%20ejection.mp4/video.webm',
-						type: 'video/webm'
-					},
-					{
-						href: 'http://www.alld-game.net/.cm4all/mediadb/.reactor%20core%20ejection.mp4/video.mp4',
-						type: 'video/mp4'
-					},
-					{
-						href: 'http://www.alld-game.net/.cm4all/mediadb/.reactor%20core%20ejection.mp4/video.ogv',
-						type: 'video/ogg'
-					}
-				]
+				type: 'text/html',
+				href: 'https://www.youtube.com/watch?v=_mr1P1MLfXk',
+				youtube: '_mr1P1MLfXk'
+				poster: 'https://www.youtube.com/watch?v=_mr1P1MLfXk/maxresdefault.jpg'
 			},
-			/*,
-            {
-                title: 'LES TWINS - An Industry Ahead',
-                type: 'text/html',
-                youtube: 'zi4CIXpx7Bg'
-            },
-            {
-                title: 'KN1GHT - Last Moon',
-                type: 'text/html',
-                vimeo: '73686146',
-                poster: 'img/deaf_bird.png'
-            }*/
 			{
 				title: 'Deaf Bird Entertainment',
 				type: 'video/*',
