@@ -30,22 +30,10 @@ $( document ).ready(function() {
 			},
 			{
 				title: 'Deaf Bird Entertainment',
-				type: 'video/*',
-				poster: 'img/deaf_bird.png',
-				sources: [
-					{
-						href: 'http://www.alld-game.net/.cm4all/mediadb/.Deaf%20Bird%20Entertainment%20Splash.mp4/video.webm',
-						type: 'video/webm'
-					},
-					{
-						href: 'http://www.alld-game.net/.cm4all/mediadb/.Deaf%20Bird%20Entertainment%20Splash.mp4/video.mp4',
-						type: 'video/mp4'
-					},
-					{
-						href: 'http://www.alld-game.net/.cm4all/mediadb/.Deaf%20Bird%20Entertainment%20Splash.mp4/video.ogv',
-						type: 'video/ogg'
-					}
-				]
+				type: 'text/html',
+				href: 'https://www.youtube.com/watch?v=mjEcdoySM00',
+				youtube: 'mjEcdoySM00',
+				poster: 'https://img.youtube.com/vi/mjEcdoySM00/maxresdefault.jpg'
 			}
 		], $('#blueimp-gallery').data());
 	}
