@@ -26,7 +26,7 @@ $( document ).ready(function() {
 				type: 'text/html',
 				href: 'https://www.youtube.com/watch?v=_mr1P1MLfXk',
 				youtube: '_mr1P1MLfXk',
-				poster: 'https://www.youtube.com/watch?v=_mr1P1MLfXk/maxresdefault.jpg'
+				poster: 'https://img.youtube.com/vi/_mr1P1MLfXk/maxresdefault.jpg'
 			},
 			{
 				title: 'Deaf Bird Entertainment',
