@@ -25,7 +25,7 @@ $( document ).ready(function() {
 				title: 'In Science Fiction Filmen sieht man ja manchmal, wie im Notfall der Reaktorkern eines Raumschiffs abgeworfen werden muss. Aber was genau passiert dabei eigentlich? Nun, in unserem Raumschiff haben wir diesen komplizierten Vorgang einmal gefilmt!',
 				type: 'text/html',
 				href: 'https://www.youtube.com/watch?v=_mr1P1MLfXk',
-				youtube: '_mr1P1MLfXk'
+				youtube: '_mr1P1MLfXk',
 				poster: 'https://www.youtube.com/watch?v=_mr1P1MLfXk/maxresdefault.jpg'
 			},
 			{
