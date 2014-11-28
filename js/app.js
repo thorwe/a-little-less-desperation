@@ -1,6 +1,14 @@
 $( document ).ready(function() {
-	i18n.init({ fallbackLng: 'en' }, function(t) {
+	function updateLang() {
 		$("body").i18n();
+		if (i18n.lng() === "de") {
+			$("#fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation-Deutsch/384194471747151");
+		} else {
+			$("#fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation/484452821695159");
+		}
+	};
+	i18n.init({ fallbackLng: 'en' }, function(t) {
+		updateLang();
 	});
 
 	$("#nav_gallery").click(function() {
@@ -49,11 +57,9 @@ $( document ).ready(function() {
 	$(".lang_switch").click(function(event) {
 		event.preventDefault();
 		var theLang = $(this).data("lang");
-		//console.log("Switchting to", theLang);
 		if (i18n.lng() !== theLang) {
 			i18n.setLng(theLang, function() {
-				//console.log("Language switched to", theLang);
-				$("body").i18n();
+				updateLang();
 			});
 		};
 	});
@@ -83,7 +89,7 @@ $( document ).ready(function() {
 		});
 	});
 
-	function loadNews() {
+	/*function loadNews() {
 		var location = "./locales/"+i18n.lng()+"/news.md";
 
 		$.ajax({
@@ -97,7 +103,7 @@ $( document ).ready(function() {
 			}
 		});
 	}
-	loadNews();
+	loadNews();*/
 
 	function autocollapse() {
 		var $collapsable = $(".thorwe-collapse"),
