@@ -70,7 +70,7 @@
 	},
 	"team": {
 		"heading": "The Team",
-		"lead": "We’re a very small team of game developers, actually there’s just three of us. We have quite a job to do with the adventure! But we don’t believe that creating a great adventure requires a huge team, high end equipment and unlimited financial resources. Instead, we have great motivation, good ideas and our skills. We are working with a ridiculously small budget, but we managed to get pretty far already. ",
+		"lead": "We’re a very small team of game developers, actually there’s just four of us. We have quite a job to do with the adventure! But we don’t believe that creating a great adventure requires a huge team, high end equipment and unlimited financial resources. Instead, we have great motivation, good ideas and our skills. We are working with a ridiculously small budget, but we managed to get pretty far already. ",
 		"marian": "Father of the idea and head of the project.",
 		"marian1": "Story and puzzles",
 		"marian2": "Background images and animations",
@@ -85,6 +85,10 @@
 		"stefan": "The Musician",
 		"stefan1": "Soundtrack",
 		"stefan2": "Translation to english",
+		"thorsten": "Other Instruments",
+		"thorsten1": "Web Design",
+		"thorsten2": "Music",
+		"thorsten3": "Sound Design",
 		"thankslead": "Special thanks to:",
 		"thanks1": "Arpad - Additional puzzles and dialog lines",
 		"thanks2": "Anet - Font design and additional ideas for the story"

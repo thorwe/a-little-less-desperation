@@ -70,7 +70,7 @@
 	},
 	"team": {
 		"heading": "Das Team",
-		"lead": "Wir sind ein sehr kleines Entwicklerteam, tatsächlich sind wir nur zu dritt. Mit dem Adventure haben wir uns ganz schön was vorgenommen! Allerdings glauben wir nicht, dass man für ein gutes Adventure ein großes Team, hochmoderne Ausrüstung und unbegrenzte finanzielle Mittel braucht. Wir haben statt dessen große Motivation, gute Ideen und Talent. Wir arbeiten mit einem lächerlich kleinen Budget, sind aber selbst damit schon erstaunlich weit gekommen.",
+		"lead": "Wir sind ein sehr kleines Entwicklerteam, tatsächlich sind wir nur zu viert. Mit dem Adventure haben wir uns ganz schön was vorgenommen! Allerdings glauben wir nicht, dass man für ein gutes Adventure ein großes Team, hochmoderne Ausrüstung und unbegrenzte finanzielle Mittel braucht. Wir haben statt dessen große Motivation, gute Ideen und Talent. Wir arbeiten mit einem lächerlich kleinen Budget, sind aber selbst damit schon erstaunlich weit gekommen.",
 		"marian": "Vater der Idee und Kopf des Projekts.",
 		"marian1": "Story und Rätsel",
 		"marian2": "Hintergrundgrafiken und Animationen",
@@ -85,6 +85,10 @@
 		"stefan": "Der Musiker",
 		"stefan1": "Soundtrack",
 		"stefan2": "Übersetzung ins Englische",
+		"thorsten": "Die Eierlegendewollmilchsau",
+		"thorsten1": "Webdesign",
+		"thorsten2": "Musik",
+		"thorsten3": "Sounddesign",
 		"thankslead": "Ein besonderes Dankeschön an:",
 		"thanks1": "Arpad - Zusätzliche Rätselideen und Dialogzeilen",
 		"thanks2": "Anet - Font für das Spiel und zusätzliche Ideen für die Story"
