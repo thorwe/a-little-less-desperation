@@ -11,11 +11,11 @@ $( document ).ready(function() {
 		updateLang();
 	});
 
-	$("#nav_gallery").click(function() {
+	$("#nav_gallery").click(function(event) {
 		event.preventDefault();
 		blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
 	});
-	$("#carousel_gallery").click(function() {
+	$("#carousel_gallery").click(function(event) {
 		event.preventDefault();
 		blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
 	});
