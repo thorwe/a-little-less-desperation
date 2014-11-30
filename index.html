@@ -48,9 +48,10 @@
 			</div>
 		</div>
 
+		<div id="home"></div>
 		<div class="navbar-wrapper">
-			<div class="container">
-				<div id="autocollapse" class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container" id="navbar-wrapper-container">
+				<div id="autocollapse" class="navbar navbar-inverse" role="navigation">
 					<div class="container">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -59,11 +60,15 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="#" style="padding-top:2px"><img id="logo" src="img/alld_logo.png" class="img-responsive" style="width: 140px; height: 140px;"></img></a>
+							<a class="navbar-brand" href="#" style="padding-top:2px">
+								<img id="logo" src="img/alld_logo.png" class="img-responsive" style="width: 140px; height: 140px;"></img>
+								<img id="logo_symbol" src="img/alld_logo_symbol.png" style="width: 70px; height: 70px; vertical-align:top; display:none"></img>
+								<img id="logo_text" src="img/alld_logo_text.png" style="width: 92px; height: 46px; vertical-align:top; display:none"></img>
+							</a>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#"><span class='glyphicon glyphicon-home'></span> <span data-i18n="nav.home"></span></a></li>
+							<li class="active"><a href="#home"><span class='glyphicon glyphicon-home'></span> <span data-i18n="nav.home"></span></a></li>
 							<li class="dropdown" id="thorwe-oncollapse" style="display:none;">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-rocket"></i> <span data-i18n="nav.game"></span><span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
@@ -181,37 +186,36 @@
 	</div><!-- /.row -->
 
 	<br><br><br><br>
-	<hr class="featurette-divider">
-
-	<div id="game">
+	<hr class="featurette-divider" id="game">
+	<div>
 		<h1><i class="fa fa-rocket"></i> <span data-i18n="game.heading"></span></h1><br>
 		<div class="row featurette">
-			<div class="col-md-3">
+			<div class="col-sm-3">
 				<img class="featurette-image img-responsive" src="img/sideshow_kabel.png">
 			</div>
-			<div class="col-md-9">
+			<div class="col-sm-9">
 				<p class="lead" data-i18n="home.1"></p>
 				<p class="lead" data-i18n="home.2"></p>
 				<img class="featurette-image img-responsive" src="img/korb2.png">
 			</div>
 		</div>
 		<div class="row featurette">
-			<div class="col-md-9">
+			<div class="col-sm-9">
 				<p class="lead" data-i18n="game.1"></p>
 				<p class="lead" data-i18n="game.2"></p>
 				<p class="lead" data-i18n="game.3"></p>
 				<p class="lead" data-i18n="game.4"></p>
 			</div>
-			<div class="col-md-3">
+			<div class="col-sm-3">
 				<img class="featurette-image img-responsive" src="img/sideshow_vents.png">
 			</div>
 		</div>
 	</div>
 
-	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
-	<hr class="featurette-divider">
-
-	<div id="chars">
+	<p class="pull-right"><a href="#home"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+	
+	<hr class="featurette-divider" id="chars">
+	<div>
 		<h1><i class="fa fa-users"></i> <span data-i18n="chars.heading"></span></h1><br>
 		<div class="row featurette">
 			<div class="col-md-5">
@@ -267,10 +271,10 @@
 		</div>
 	</div>
 
-	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
-	<hr class="featurette-divider">
+	<p class="pull-right"><a href="#home"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
 
-	<div id="features">
+	<hr class="featurette-divider" id="features">
+	<div>
 		<h1><i class="fa fa-list-ul"></i> <span data-i18n="features.heading"></span></h1><br>
 		<ul class="lead">
 			<li data-i18n="features.1"></li>
@@ -294,10 +298,10 @@
 		<p class="lead" data-i18n="features.seq"></p>
 	</div>
 
-	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
-	<hr class="featurette-divider">
-
-	<div id="concept">
+	<p class="pull-right"><a href="#home"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+	
+	<hr class="featurette-divider" id="concept">
+	<div>
 		<h1 class="featurette-heading"><i class="fa fa-paperclip"></i> <span data-i18n="concept.heading"></span></h1><br>
 		<p class="lead" data-i18n="concept.lead"></p>
 
@@ -327,10 +331,10 @@
 		</div>
 	</div>
 
-	<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
-	<hr class="featurette-divider">
-
-	<div id="team">
+	<p class="pull-right"><a href="#home"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+	
+	<hr class="featurette-divider" id="team">
+	<div>
 		<h1 class="featurette-heading"><i class="fa fa-coffee"></i> <span data-i18n="team.heading"></span></h1><br>
 		<p class="lead" data-i18n="team.lead"></p>
 
@@ -424,7 +428,7 @@
 	<!-- FOOTER -->
 	<footer>
 		<p><img src="img/visionaire_logo.jpg"></img></p>
-<p class="pull-right"><a href="#"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+<p class="pull-right"><a href="#home"><span class="btt" data-i18n="common.btt"></span> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
 <p>© Deaf Bird Entertainment - 2014 · <a href="#" id="impressum">Impressum</a> · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
 </footer>
 
@@ -486,7 +490,6 @@
 <script src="js/bootstrap-image-gallery.min.js"></script>
 <script src="js/markdown.min.js"></script>
 <script src="js/move.min.js"></script>
-<script src="js/jquery.softscroll.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

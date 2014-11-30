@@ -131,10 +131,13 @@ $( document ).ready(function() {
 			}
 		}		
 	}
-	$(document).on('ready', autocollapse);
 	$(window).on('resize', autocollapse);
+	autocollapse();
 
 	function moveToCarusel() {
+		if (($(window).scrollTop() > 0) || $('.navbar-collapse').hasClass("collapsing") || $('.navbar-collapse').hasClass("in"))
+			return;
+		
 		var offset = $(".carousel-inner").offset(),
 			posX = offset.left - $(window).scrollLeft(),
 			posY = offset.top - $(window).scrollTop(),
@@ -149,53 +152,103 @@ $( document ).ready(function() {
 		posX -= offset.left - $(window).scrollLeft();
 		posY -= offset.top - $(window).scrollTop();
 
-		console.log(posX, posY);
+		//console.log(posX, posY);
 		move('#logo')
 		.x(posX)
 		.y(posY)
 		.scale(2)
 		.end();
 	};
+	function rotateLogo(amount) {
+		if ($('.navbar-collapse').hasClass("collapsing") || $('.navbar-collapse').hasClass("in"))
+			return;
+		
+		if (typeof amount !== "number")
+			amount = 20;
+		
+		move('#logo')
+		.rotate(amount).then()
+		.rotate(amount * -1).pop()
+		.end();
+	};
 	$('#myCarousel').on('slide.bs.carousel', function (evt) {
+		if ($(window).scrollTop() > 0)
+			return;
+		
 		if ($(evt.relatedTarget).attr("id") === "title") {
 			moveToCarusel();
 		} else {
-			var rotation = 20;
-			if (evt.direction === "right")
-				rotation *= -1;
-
-			move('#logo')
-			.rotate(rotation).then().rotate(rotation * -1).pop()
-			.end();
+			rotateLogo((evt.direction === "right")?-20:20);
 		}
 	});
 	moveToCarusel();
+	//$('#myCarousel').on('slid.bs.carousel', function (evt) {});
 
-	$('#myCarousel').on('slid.bs.carousel', function (evt) {
-		// do something…
-	});
+	var navMarginTop = $("#autocollapse").offset().top,
+		updateNavOnScroll = function() {
+			var $nav = $("#autocollapse");
+			//console.log($nav.offset().top);
+			if($(window).scrollTop() > navMarginTop) {
+				if (!$nav.hasClass("navbar-fixed-top")) {
+					$('body').css("padding-top", "50px");
+					$nav.addClass("navbar-fixed-top");
+					//$(".marketing").css("padding-top", $("#autocollapse").height());
+					rotateLogo(10);
+				}
+			} else {
+				if ($nav.hasClass("navbar-fixed-top")) {
+					$nav.removeClass("navbar-fixed-top");
+					$('body').css("padding-top", "");
+					//$(".marketing").css("padding-top", 0);
+					/*if ($(".carousel-inner > .active").attr("id") == "title")
+						moveToCarusel();
+					else
+						rotateLogo(10);*/
+					$('#myCarousel').carousel(1);
+					//moveToCarusel();
+				}
+			}	
+		};	
+	$(document).scroll(updateNavOnScroll);
+	updateNavOnScroll();
+	
+	$('body').scrollspy({ target: '#navbar-wrapper-container' });
 
-	$(document).scroll(function () {
-		/*var windowscroll = $(window).scrollTop();
-        var navHeight = $('#navWrapper').height();
-        if(windowscroll >= $("#actionMenu").offset().top) {
-            $('#pageHeader').removeClass('minimal');
-            $('#pageHeader').addClass('minimal');
-            if ($(window).width() > 800) {
-                $('#systemNotification').css('top',navHeight);
-            }
-            else {
-                $('#systemNotification').css('top','0');
-            }
-        }
-        else if($("#actionMenu").offset().top > windowscroll) {
-            $('#pageHeader').removeClass('minimal');
-            if ($(window).width() > 800) {
-                $('#systemNotification').css('top',navHeight);
-            }
-            else {
-                $('#systemNotification').css('top','0');
-            }
-        }*/
+	$('a[href*=#]:not([href=#])').delay(1000).click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: (target.selector == "#home") ? 0 : (target.offset().top + (($("#autocollapse").hasClass("navbar-fixed-top"))?0:60)) // - parseFloat($('body').css("padding-top"))
+				}, 1000);
+				return false;
+			}
+		}
 	});
+	//Executed on page load with URL containing an anchor tag.
+	if($(location.href.split("#")[1])) {
+		var target = $('#'+location.href.split("#")[1]);
+		if (target.length) {
+			$('html,body').animate({
+				scrollTop: (target.selector == "#home") ? 0 : (target.offset().top + (($("#autocollapse").hasClass("navbar-fixed-top"))?0:60)) // - parseFloat($('body').css("padding-top"))
+			}, 1000);
+			return false;
+		}
+	}
+	
+	$(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });	// fix for height problem on very small devices for fixed-top nav
+
+	// small devices view -> on open change image
+	$('.navbar-collapse').on('show.bs.collapse', function() {
+		$("#logo").css("display", "none");
+		$("#logo_symbol").css("display", "inline");
+		$("#logo_text").css("display", "inline");
+	});
+	$('.navbar-collapse').on('hidden.bs.collapse', function() {
+		$("#logo").css("display", "block");
+		$("#logo_symbol").css("display", "none");
+		$("#logo_text").css("display", "none");
+	});
+	
 });
