@@ -2,9 +2,9 @@ $( document ).ready(function() {
 	function updateLang() {
 		$("body").i18n();
 		if (i18n.lng() === "de") {
-			$("#fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation-Deutsch/384194471747151");
+			$(".fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation-Deutsch/384194471747151");
 		} else {
-			$("#fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation/484452821695159");
+			$(".fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation/484452821695159");
 		}
 	};
 	i18n.init({ fallbackLng: 'en' }, function(t) {
