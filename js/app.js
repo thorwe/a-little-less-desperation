@@ -76,6 +76,7 @@ $( document ).ready(function() {
 		//modal.find('.modal-title').text('New message to ' + recipient)
 
 		var location = "./locales/"+i18n.lng()+"/impressum.md";
+		console.log(location);
 
 		$.ajax({
 			url: location,
