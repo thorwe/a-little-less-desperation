@@ -74,12 +74,12 @@ $( document ).ready(function() {
 		// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
 		var modal = $(this)
 		//modal.find('.modal-title').text('New message to ' + recipient)
-
-		var location = "./locales/"+i18n.lng()+"/impressum.md";
-		console.log(location);
-
+		var lang = i18n.lng();
+		if (lang.length > 2)
+			lang = lang.slice(0,2);
+		
 		$.ajax({
-			url: location,
+			url: "./locales/"+lang+"/impressum.md",
 			type: 'get',
 			dataType: 'html',
 			async: false,
