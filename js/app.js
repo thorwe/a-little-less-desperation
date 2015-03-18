@@ -89,6 +89,41 @@ $( document ).ready(function() {
 			}
 		});
 	});
+	
+	var modalIs = "impressum";
+	$("#impressum").click(function(event) {
+		modalIs = "impressum";
+		$("#termsModal").modal();
+	});
+
+	$("#privacy").click(function(event) {
+		modalIs = "privacy";
+		$("#termsModal").modal();
+	});
+	
+	$("#termsModal").on('show.bs.modal', function (event) {
+		//var button = $(event.relatedTarget) // Button that triggered the modal
+		//var recipient = button.data('whatever') // Extract info from data-* attributes
+		// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+		// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		console.log(event.relatedTarget);
+		var modal = $(this),
+			lang = i18n.lng();
+		
+		if (lang.length > 2)
+			lang = lang.slice(0,2);
+		
+		$.ajax({
+			url: "./locales/"+lang+"/"+modalIs+".md",
+			type: 'get',
+			dataType: 'html',
+			async: false,
+			success: function(data) {
+				var htmlData = markdown.toHTML(data);
+				modal.find('.modal-body').html(htmlData);
+			}
+		});
+	});
 
 	/*function loadNews() {
 		var location = "./locales/"+i18n.lng()+"/news.md";
