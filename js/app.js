@@ -3,8 +3,12 @@ $( document ).ready(function() {
 		$("body").i18n();
 		if (i18n.lng() === "de") {
 			$(".fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation-Deutsch/384194471747151");
+			$("#trailer_link").attr("href", "https://youtube.com/watch?v=y2CzfG9dtPs");
+			$("#trailer_sticker").attr("src", "img/trailer_sticker_de.png");
 		} else {
 			$(".fb").attr("href", "https://www.facebook.com/pages/A-Little-Less-Desperation/484452821695159");
+			$("#trailer_link").attr("href", "https://youtube.com/watch?v=EE_u_J9mX0o");
+			$("#trailer_sticker").attr("src", "img/trailer_sticker_en.png");
 		}
 	};
 	i18n.init({ fallbackLng: 'en' }, function(t) {
@@ -118,7 +122,7 @@ $( document ).ready(function() {
 			}
 		});
 	});
-
+	
 	/*function loadNews() {
 		var location = "./locales/"+i18n.lng()+"/news.md";
 
